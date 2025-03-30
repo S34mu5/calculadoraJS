@@ -1,5 +1,3 @@
-
-
 // ======== PASO 1: CONECTAR CON LOS ELEMENTOS HTML ========
 // Buscar la pantalla y los botones especiales en la página# nombre, optativa, total
 
@@ -25,8 +23,6 @@ const operadorRestar = document.getElementById("operadorRestar");
 const operadorMultiplicar = document.getElementById("operadorMultiplicar");
 const operadorDividir = document.getElementById("operadorDividir");
 const operadorDecimal = document.getElementById("operadorDecimal");
-
-
 
 // Al iniciar, mostrar "0" en la pantalla
 
