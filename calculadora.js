@@ -24,6 +24,11 @@ const operadorMultiplicar = document.getElementById("operadorMultiplicar");
 const operadorDividir = document.getElementById("operadorDividir");
 const operadorDecimal = document.getElementById("operadorDecimal");
 
+// Crear elemento de audio para reproducir sonido al dividir por cero
+const sonidoError = new Audio();
+sonidoError.src = "audio/mixkit-little-cat-pain-meow-87.wav"; // Sonido de gato sufriendo
+sonidoError.preload = "auto";
+
 // Al iniciar, mostrar "0" en la pantalla
 
 pantalla.value = "0";
@@ -60,7 +65,8 @@ function calcular() {
     case "/": // Si es división
       // No podemos dividir entre cero
       if (actual === 0) {
-        resultado = "Error"; // Mostrar error
+        resultado = "Hiciste llorar a Hello Kitty"; // Mostrar error
+        sonidoError.play(); // Reproducir sonido de gato muriendo
       } else {
         resultado = anterior / actual;
       }
